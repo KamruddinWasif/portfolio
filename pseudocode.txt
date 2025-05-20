@@ -1,2 +1,106 @@
 This is where I will write out the pseudo code for my portfolio. 
 It is my application is natural language so I can break down the application
+
+//start
+
+// Initialize website application
+START PortfolioWebsite
+
+// ========== GLOBAL ==========
+DEFINE COLORS:
+    PRIMARY = sageGreen
+    SECONDARY = charcoal
+    ACCENT = beige
+
+DEFINE FONT:
+    HEADINGS = 'Poppins Bold'
+    BODY = 'Inter'
+
+DEFINE GLOBAL COMPONENTS:
+    FixedHeader
+    NavigationMenu
+    Footer
+
+// ========== COMPONENT: FixedHeader ==========
+CREATE FixedHeader:
+    DISPLAY Logo ("W" or "Wasif Kamruddin")
+    DISPLAY NavigationMenu with links:
+        - Home
+        - Resume
+        - Projects
+        - InterviewMe
+        - Contact
+        - Blog
+    SET position = fixed
+    SET behavior = sticky on scroll
+    IF screenSize == mobile THEN
+        DISPLAY HamburgerMenu
+
+// ========== PAGE: Home ==========
+DISPLAY HeroSection:
+    DISPLAY Headline("Hi, I’m Wasif — a tech founder, product builder, and creative strategist.")
+    DISPLAY Subheadline("Building the future with faith, code, and community.")
+    DISPLAY CTA Buttons:
+        - ViewResumeButton
+        - ContactMeButton
+    DISPLAY AbstractGridPattern background
+    DISPLAY WasifPhoto on right
+
+// ========== SECTION: About ==========
+DISPLAY AboutSection:
+    DISPLAY Title("About")
+    DISPLAY Text:
+        - "Ex-Marine turned tech entrepreneur"
+        - "Founder of Momen Technologies, Namika Collective, RUKA"
+        - "QA Analyst at Biller Genie"
+        - "Mission-driven, faith-centered, product-focused"
+
+// ========== SECTION: Projects & Ventures ==========
+DISPLAY ProjectsSection:
+    FOR EACH project IN [SheikhAI, RUKA, NamikaCollective, JannahSquad]:
+        DISPLAY ProjectCard:
+            - Name
+            - Description
+            - LearnMoreButton
+
+// ========== SECTION: Resume ==========
+DISPLAY ResumeSection:
+    DISPLAY Title("Resume")
+    DISPLAY CareerTimeline:
+        - Marine Corps
+        - QA Analyst at Biller Genie
+        - Startup Founder
+    DISPLAY DownloadResumeButton
+
+// ========== SECTION: Interview Me ==========
+DISPLAY InterviewSection:
+    DISPLAY Text("Available for podcasts, panels, and speaking engagements.")
+    DISPLAY Optional Media Embed (if available)
+    DISPLAY BookingForm or Email CTA
+
+// ========== SECTION: Contact ==========
+DISPLAY ContactSection:
+    FORM:
+        - NameField
+        - EmailField
+        - MessageField
+        - SubmitButton
+    DISPLAY SocialLinks: GitHub, LinkedIn, Instagram
+
+// ========== SECTION: Blog ==========
+DISPLAY BlogSection:
+    FOR EACH post IN BlogPosts:
+        DISPLAY BlogCard:
+            - Image
+            - Title
+            - ShortDescription
+
+// ========== COMPONENT: Footer ==========
+CREATE Footer:
+    DISPLAY Logo
+    DISPLAY Copyright
+    DISPLAY SocialMediaIcons
+    DISPLAY QuickLinks to all nav pages
+
+// END OF WEBSITE
+END PortfolioWebsite
