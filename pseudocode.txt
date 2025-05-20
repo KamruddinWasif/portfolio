@@ -1,0 +1,2 @@
+This is where I will write out the pseudo code for my portfolio. 
+It is my application is natural language so I can break down the application
